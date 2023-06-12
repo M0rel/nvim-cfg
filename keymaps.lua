@@ -23,3 +23,6 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
+vim.api.nvim_set_keymap('n', 'ff', [[:Telescope find_files<CR>]], {})
+vim.api.nvim_set_keymap('n', 't', [[:TagbarToggle<CR>]], {})
+

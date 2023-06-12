@@ -40,6 +40,22 @@ return require('packer').startup(function(use)
     ---------------------------------------
     use ({ 'projekt0n/github-nvim-theme' })
 
+    use ({ 'mhinz/vim-startify' })              -- start screen
+    use ({ 'DanilaMihailov/beacon.nvim' })      -- cursor jump
+    use ({
+        'nvim-lualine/lualine.nvim',            -- statusline
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    })
+
+    use ({
+        'nvim-telescope/telescope.nvim',        -- fuzzy finder
+        requires = { {'nvim-lua/plenary.nvim'} }
+    })
+    use ({ 'tpope/vim-fugitive' })              -- git integration
+    use ({ 'majutsushi/tagbar' })               -- code structure
+    use ({ 'windwp/nvim-autopairs' })
+
+
     -- Do not change the ordering of those
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim'}
